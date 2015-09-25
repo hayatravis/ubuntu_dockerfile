@@ -20,7 +20,7 @@
   s = status --branch --short
   t = tag
   w = whatchanged
-
+  graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
 [core]
   excludesfile = ~/.gitignore
   editor = vim

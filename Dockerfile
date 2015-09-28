@@ -16,7 +16,8 @@ RUN \
   apt-get install -y software-properties-common && \
   apt-get install -y byobu curl git htop man unzip vim wget && \
   # Added
-  apt-get install -y nginx mysql-server redis-server && \
+  apt-get install -y nginx mysql-server redis-server mercurial make binutils bison gcc build-essential
+&& \
   rm -rf /var/lib/apt/lists/*
 
 # Add files.
@@ -30,5 +31,9 @@ ENV HOME /root
 # Define working directory.
 WORKDIR /root
 
-# Define default command.
+# For gvm install
+RUN (curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) | bash
+RUN chmod +x $HOME/.scripts/gvm/gvm-install
+RUN $HOME/.scripts/gvm/gvm-install
+
 CMD ["bash"]

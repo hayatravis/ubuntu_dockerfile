@@ -16,8 +16,7 @@ RUN \
   apt-get install -y software-properties-common && \
   apt-get install -y byobu curl git htop man unzip vim wget && \
   # Added
-  apt-get install -y nginx mysql-server redis-server mercurial make binutils bison gcc build-essential
-&& \
+  apt-get install -y nginx mysql-server redis-server mercurial make binutils bison gcc build-essential && \
   rm -rf /var/lib/apt/lists/*
 
 # Add files.

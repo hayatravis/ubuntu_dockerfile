@@ -1,5 +1,5 @@
 # ubuntu_dockerfile
-ubuntu14.04 dockerfile
+ubuntu_dockerfile_golang
 
 ## installed
 - nginx version: nginx/1.4.6 (Ubuntu)
